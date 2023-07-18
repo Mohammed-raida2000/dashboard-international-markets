@@ -1,0 +1,642 @@
+@charset "UTF-8";
+/* 
+   // @forward All Files in helpers Folder
+
+*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f1f5f9;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+@media (max-width: 767px) {
+  ::-webkit-scrollbar-thumb {
+    background: #49a3f1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  ::-webkit-scrollbar-thumb {
+    background: #1a73e8;
+  }
+}
+
+.main-header {
+  background-color: white;
+  display: flex;
+  padding: 7px 9px;
+  border-radius: 4px;
+}
+.main-header .title-page {
+  width: fit-content;
+}
+.main-header .title-page .main-title {
+  display: flex;
+  text-transform: capitalize;
+  position: relative;
+}
+.main-header .title-page .main-title li:first-of-type > a {
+  color: #ccc;
+  font-weight: normal;
+}
+.main-header .title-page .main-title .space {
+  padding: 0 10px;
+}
+.main-header .title-page .titles {
+  display: block;
+  margin-top: 7px;
+  font-weight: bold;
+}
+.main-header .top-navegation {
+  width: 70%;
+  flex: 1;
+}
+.main-header .top-navegation .ul-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #858181;
+  font-size: 1rem;
+  height: 100%;
+  position: relative;
+}
+.main-header .top-navegation .ul-nav li {
+  position: relative;
+}
+.main-header .top-navegation .ul-nav li:first-of-type {
+  padding-right: 30px !important;
+}
+.main-header .top-navegation .ul-nav li:first-of-type input[type=search] {
+  border: navajowhite;
+  outline: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+.main-header .top-navegation .ul-nav li:not(:last-of-type),
+.main-header .top-navegation .ul-nav li:not(:first-of-type) {
+  padding-right: 15px;
+}
+.main-header .top-navegation .ul-nav li:nth-of-type(4) > i::after {
+  content: "3";
+  background: red;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  position: absolute;
+  left: 9px;
+  top: -1px;
+  font-size: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+.main-header .top-navegation .star-user {
+  flex-wrap: nowrap;
+  display: flex;
+}
+.main-header .top-navegation .star-user a {
+  flex-wrap: nowrap;
+  display: flex;
+  color: initial;
+  padding: 2px;
+  border-radius: 0 4px 4px 0;
+}
+.main-header .top-navegation .star-user a:first-of-type {
+  border: 1px solid #1f232826;
+  text-transform: capitalize;
+  background-color: linear-gradient(180deg, #f6f8fa, #ebf0f4 90%);
+  border-radius: 4px 0 0 4px;
+}
+.main-header .top-navegation .star-user a:last-of-type {
+  border: 1px solid #1f232826;
+  background-color: #5d97984d;
+}
+
+/*
+    // Bootstrap’s grid system
+*/
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+}
+@media screen and (min-width: 576px) {
+  .container .MediaScreen-sm {
+    /* sm device*/
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .MediaScreen-md {
+    /* md device*/
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container .MediaScreen-lg {
+    /* lg device*/
+    max-width: 970px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .MediaScreen-xl {
+    /* xl device*/
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container .MediaScreen-xxl {
+    /* xxl device*/
+    max-width: 1320px;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 31px 10px;
+  color: #344767;
+  box-shadow: 0 0 10px #ccc;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.footer span {
+  font-weight: bold;
+}
+
+/*
+  // star sidebar-1 section
+*/
+.sidebar {
+  background-color: white;
+  border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: 57px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .sidebar {
+    width: 180px;
+    font-size: 12px;
+  }
+}
+.sidebar .headboard a, .sidebar .headboard .dash .textaccount p, .sidebar .dash .textaccount .headboard p {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  box-shadow: inset 0px -1px 1px -1px #344767;
+  color: #344767;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+@media (max-width: 767px) {
+  .sidebar .headboard a, .sidebar .headboard .dash .textaccount p, .sidebar .dash .textaccount .headboard p {
+    padding: 10px;
+    font-size: 7px;
+  }
+}
+.sidebar .dash {
+  border-radius: 4px;
+  padding: 0 5px;
+}
+@media (max-width: 767px) {
+  .sidebar .dash {
+    padding: 8px 10px;
+    font-size: 11px;
+    transition: 0.3s;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .sidebar .dash {
+    margin-top: 6px;
+  }
+}
+.sidebar .dash .active {
+  border-radius: 4px;
+  background-image: linear-gradient(195deg, #49a3f1, #1a73e8);
+  color: #344767;
+  transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .sidebar .dash .active {
+    background-image: linear-gradient(92deg, #49a3f1, #49a3f19c);
+  }
+}
+.sidebar .dash li {
+  padding: 13px 0;
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+}
+@media (max-width: 767px) {
+  .sidebar .dash li {
+    text-align: center;
+    padding: 10px;
+  }
+}
+.sidebar .dash li:hover {
+  background-color: #cccccc7d !important;
+  border-radius: 4px 0;
+}
+.sidebar .dash li a, .sidebar .dash li .textaccount p, .sidebar .dash .textaccount li p {
+  color: #344767;
+  padding-left: 10px;
+}
+@media (max-width: 767px) {
+  .sidebar .dash li a, .sidebar .dash li .textaccount p, .sidebar .dash .textaccount li p {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar .dash .textaccount {
+    padding: 0px;
+  }
+}
+.sidebar .dash .textaccount p {
+  font-weight: bold;
+  font-family: unset;
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .sidebar .dash .textaccount p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar .dash span {
+    display: none;
+  }
+}
+
+/*
+  // end sidebar-1 section
+*/
+/*
+  // star main-section dashboad
+*/
+/*----------------------------------*/
+.dashboad .orders, .dashboad .main-section .overveiw .projects, .dashboad .main-section .collection-box .card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.dashboad .main-section .overveiw .projects .table table tbody td .line .bg-line, .dashboad .main-section .overveiw .projects .table table tbody td .line {
+  height: 3px;
+  border-radius: 2px;
+}
+
+/*----------------------------------*/
+.dashboad {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  margin-top: 10px;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .dashboad {
+    gap: 10px;
+  }
+}
+.dashboad .main-section {
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .dashboad .main-section .main-header .title-page {
+    width: fit-content;
+  }
+}
+@media (max-width: 767px) {
+  .dashboad .main-section .main-header .top-navegation .ul-nav li:first-of-type {
+    display: none;
+  }
+}
+.dashboad .main-section .collection-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  position: relative;
+  margin-top: 20px;
+  gap: 23px 15px;
+}
+.dashboad .main-section .collection-box .card i {
+  position: relative;
+  bottom: 30px;
+  font-size: 0.8rem;
+  padding: 13px;
+  border-radius: 20%;
+  color: white;
+}
+.dashboad .main-section .collection-box .card .black {
+  background-image: linear-gradient(195deg, #42424a, #191919);
+}
+.dashboad .main-section .collection-box .card .move {
+  background-image: linear-gradient(195deg, #ec407a, #d81b60);
+}
+.dashboad .main-section .collection-box .card .green {
+  background-image: linear-gradient(195deg, #66bb6a, #43a047);
+}
+.dashboad .main-section .collection-box .card .blue {
+  background-image: linear-gradient(195deg, #49a3f1, #1a73e8);
+}
+.dashboad .main-section .collection-box .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.dashboad .main-section .collection-box .data h6 {
+  font-weight: 300;
+  text-align: end;
+}
+.dashboad .main-section .collection-box .data h6 span {
+  text-align: end;
+  font-weight: bold;
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+}
+.dashboad .main-section .collection-box .foot {
+  color: #7e7979;
+  border-top: 1px solid rgba(212, 212, 212, 0.4);
+}
+.dashboad .main-section .collection-box .foot p {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 12px;
+}
+.dashboad .main-section .collection-box .foot p span {
+  color: #45bd29;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.dashboad .main-section .collection-box .foot p .red {
+  color: red;
+}
+.dashboad .main-section .charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  position: relative;
+  margin-top: 30px;
+  gap: 20px 15px;
+  height: 250px;
+}
+.dashboad .main-section .charts .graphic-table {
+  background: white;
+  border-radius: 8px;
+  position: relative;
+}
+.dashboad .main-section .charts .graphic-table .graphic-chart {
+  padding: 10px 20px;
+  box-shadow: 0px 0px 9px -1px #ccc;
+  width: calc(100% - 20px);
+  margin: auto;
+  border-radius: 6px;
+  margin-top: -26px;
+}
+.dashboad .main-section .charts .graphic-table .chart-box {
+  position: absolute;
+  padding: 10px;
+  bottom: 65px;
+  margin-bottom: -60px;
+}
+.dashboad .main-section .charts .graphic-table .chart-box .datas {
+  border-bottom: 1px solid #ccc9;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ccc9;
+  padding-bottom: 11px;
+}
+.dashboad .main-section .charts .graphic-table .chart-box .datas p {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 12px;
+}
+.dashboad .main-section .charts .graphic-table .chart-box .foots p {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 12px;
+}
+.dashboad .main-section .charts .graphic-table .chart-box .foots p i {
+  margin-right: 5px;
+  color: #9f9f9f;
+}
+.dashboad .main-section .overveiw {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.dashboad .main-section .overveiw .projects {
+  overflow-x: auto;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+.dashboad .main-section .overveiw .projects .title-proj {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboad .main-section .overveiw .projects .title-proj h6 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.dashboad .main-section .overveiw .projects .title-proj p {
+  font-weight: 300;
+  color: #7e7979;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.dashboad .main-section .overveiw .projects .title-proj p > i {
+  font-size: 1.1rem;
+  color: #1a73e8;
+  margin-right: 5px;
+}
+.dashboad .main-section .overveiw .projects .title-proj p > span {
+  font-weight: 900;
+}
+.dashboad .main-section .overveiw .projects .title-proj .icons {
+  margin-right: 15px;
+}
+.dashboad .main-section .overveiw .projects .table {
+  overflow-x: auto;
+}
+.dashboad .main-section .overveiw .projects .table table {
+  border-spacing: 0;
+  min-width: 650px;
+  width: 100%;
+  font-size: 11px;
+}
+.dashboad .main-section .overveiw .projects .table table thead {
+  background-color: #eee;
+}
+.dashboad .main-section .overveiw .projects .table table thead td {
+  padding: 13px 10px;
+  width: 100px;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td {
+  padding: 5px 10px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid #e6e2e2;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .materials {
+  display: flex;
+  align-items: center;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .materials > div img {
+  height: 30px !important;
+  width: 30px !important;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .materials div:last-of-type {
+  margin-left: 10px;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .materials img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border-border: 1px soild;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .line {
+  position: relative;
+  background: #85818117;
+  top: 8px;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .line .bg-line {
+  position: absolute;
+  background: #49a3f1;
+}
+.dashboad .main-section .overveiw .projects .table table tbody td .line .bg-line span {
+  position: absolute;
+  left: 0;
+  top: -1rem;
+}
+.dashboad .main-section .overveiw .projects .table td:nth-of-type(2) > a {
+  margin-left: -0.78rem;
+}
+.dashboad .orders {
+  flex: 1;
+  width: calc(100% - 65%);
+}
+.dashboad .orders .summerybox .title-proj {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboad .orders .summerybox .title-proj h6 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.dashboad .orders .summerybox .title-proj p {
+  font-weight: 300;
+  color: #7e7979;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.dashboad .orders .summerybox .title-proj p > i {
+  font-size: 1.1rem;
+  color: #1a73e8;
+  margin-right: 5px;
+}
+.dashboad .orders .summerybox .title-proj p > span {
+  font-weight: 900;
+}
+.dashboad .orders .summerybox ul {
+  padding: 10px;
+  position: relative;
+  transition: 0.3s;
+}
+.dashboad .orders .summerybox ul li {
+  display: flex;
+  position: relative;
+  margin-bottom: 12px;
+}
+.dashboad .orders .summerybox ul li span i {
+  z-index: 2;
+  position: relative;
+}
+.dashboad .orders .summerybox ul li span i.black {
+  color: #191919;
+}
+.dashboad .orders .summerybox ul li span i.move {
+  color: #d81b60;
+}
+.dashboad .orders .summerybox ul li span i.orange {
+  color: #a6761d;
+}
+.dashboad .orders .summerybox ul li span i.green {
+  color: #43a047;
+}
+.dashboad .orders .summerybox ul li span i.blue {
+  color: #1a73e8;
+}
+.dashboad .orders .summerybox ul li .texts {
+  margin-left: 25px;
+}
+.dashboad .orders .summerybox ul li .texts h5 {
+  margin-bottom: 3px;
+  color: #344767;
+  font-size: 0.75rem;
+}
+.dashboad .orders .summerybox ul li .texts span {
+  font-size: 0.8rem;
+  color: #7b809a;
+  font-weight: 400;
+}
+.dashboad .orders .summerybox ul li::before {
+  content: "";
+  border-right: 1px solid #e5e5e5;
+  left: 7px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+/*
+  // end main-section dashboad
+*/

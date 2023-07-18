@@ -1,0 +1,115 @@
+@use '../helpers/helpers' as *;
+
+
+// start top header == Top of the page.
+.main-header {
+    background-color: white;
+    display: flex;
+    padding: 7px 9px;
+    border-radius: 4px;
+
+    .title-page {
+
+        width: fit-content;
+
+        .main-title {
+            display: flex;
+            text-transform: capitalize;
+            position: relative;
+
+            li:first-of-type>a {
+                color: #ccc;
+                font-weight: normal;
+            }
+
+            .space {
+                padding: 0 10px;
+            }
+
+        }
+
+        .titles {
+            display: block;
+            margin-top: 7px;
+            font-weight: bold;
+        }
+    }
+
+    .top-navegation {
+        width: 70%;
+        flex: 1;
+
+        .ul-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: #858181;
+            font-size: 1rem;
+            height: 100%;
+            position: relative;
+
+            & li {
+                position: relative;
+            }
+
+            li:first-of-type {
+                padding-right: 30px !important;
+
+                input[type="search"] {
+                    border: navajowhite;
+                    outline: 1px solid $border-color;
+                    padding: 10px;
+                    border-radius: 8px;
+                    font-size: 11px;
+                }
+            }
+
+            li:not(:last-of-type),
+            li:not(:first-of-type) {
+                padding-right: 15px;
+            }
+
+            & li:nth-of-type(4)>i::after {
+                content: "3";
+                background: red;
+                height: 12px;
+                width: 12px;
+                border-radius: 100%;
+                position: absolute;
+                left: 9px;
+                top: -1px;
+                font-size: 8px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid;
+            }
+        }
+
+        .star-user {
+            flex-wrap: nowrap;
+            display: flex;
+
+            a {
+                flex-wrap: nowrap;
+                display: flex;
+                color: initial;
+                padding: 2px;
+                border-radius: 0 4px 4px 0;
+            }
+
+            & a:first-of-type {
+                border: 1px solid #1f232826;
+                text-transform: capitalize;
+                background-color: linear-gradient(180deg, #f6f8fa, #ebf0f4 90%);
+                border-radius: 4px 0 0 4px;
+            }
+
+            & a:last-of-type {
+                border: 1px solid #1f232826;
+                background-color: #5d97984d;
+            }
+        }
+    }
+}

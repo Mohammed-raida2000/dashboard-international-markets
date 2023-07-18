@@ -1,0 +1,127 @@
+@use '../helpers/helpers' as *;
+@use '../helpers/breakPoints' as *;
+/*
+  // star sidebar-1 section
+*/
+
+
+// @include media-queiry ($lg) {}
+
+// show sidebar when u custome screen is small   
+.sidebar {
+  background-color: white;
+  border-radius: $bor-rad4;
+
+  @include media-queiry (small) {
+    width: 57px;
+  }
+
+  @include media-queiry (Medium) {
+    width: 180px;
+    font-size: $font-12px;
+  }
+
+  .headboard a {
+    text-align: center;
+    display: block;
+    padding: 15px;
+    box-shadow: inset 0px -1px 1px -1px #344767;
+    color: #344767;
+    // margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+
+    @include media-queiry (small) {
+      padding: 10px;
+      font-size: 7px;
+    }
+  }
+
+  .dash {
+    border-radius: 4px;
+    padding: 0 5px;
+
+    @include media-queiry (small) {
+      padding: 8px 10px;
+      font-size: 11px;
+      transition: 0.3s;
+    }
+
+    @include media-queiry (Medium) {
+      margin-top: 6px;
+    }
+
+    .active {
+      border-radius: 4px;
+      background-image: linear-gradient(195deg, #49a3f1, #1a73e8);
+      color: #344767;
+      transition: 0.3s;
+
+      @include media-queiry (small) {
+        background-image: linear-gradient(92deg, #49a3f1, #49a3f19c);
+      }
+
+    }
+
+    li {
+      padding: 13px 0;
+      margin-top: 1.5px;
+      margin-bottom: 1.5px;
+
+      @include media-queiry (small) {
+        text-align: center;
+        padding: 10px;
+      }
+
+      &:hover {
+        background-color: #cccccc7d !important;
+        border-radius: 4px 0;
+      }
+
+      a {
+        color: #344767;
+        padding-left: 10px;
+
+        // media quarry at min width 767px and less than
+        @include media-queiry (small) {
+          padding-left: 0px;
+
+        }
+      }
+
+    }
+
+    & .textaccount {
+      @include media-queiry (small) {
+        padding: 0px;
+      }
+
+      & p {
+        font-weight: bold;
+        font-family: unset;
+        font-size: 12px;
+        @extend a;
+
+        @include media-queiry (small) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    // hidden text on sidebar @media quary 768px and less than.
+    & span {
+
+      @include media-queiry (small) {
+        display: none;
+      }
+    }
+  }
+
+}
+
+
+
+/*
+  // end sidebar-1 section
+*/

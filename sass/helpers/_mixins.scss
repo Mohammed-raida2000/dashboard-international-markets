@@ -1,0 +1,8 @@
+
+// animations 
+@mixin KeyF($Animation-Name) {
+    @keyframes #{$Animation-Name} {
+        @content;
+    }
+}
+

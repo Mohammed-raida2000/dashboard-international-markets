@@ -1,0 +1,455 @@
+// [2]- in homepage.scss or other pages like about.scss will be Special Case >> 
+//I mean here you are Not Forced to use @use
+//to import _layout.scss file which contain All layout files 
+
+// [3]- here you can choose some special layout files like _header.scss & _footer.scss 
+//in this case you will use @use to import files that you want, not all files 
+@use "../layout/layout" as *;
+
+@use "../helpers/helpers" as *;
+
+/*
+  // star main-section dashboad
+*/
+
+/*----------------------------------*/
+// sequode class // sorce min-code
+%cards {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+// seduoe class
+%line {
+  height: 3px;
+  border-radius: 2px;
+}
+
+/*----------------------------------*/
+.dashboad {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  margin-top: 10px;
+  gap: 15px;
+
+  @include media-queiry (small) {
+    gap: 10px;
+  }
+
+  // < !-- start main section -->
+  .main-section {
+    flex-grow: 1;
+
+    .main-header {
+      .title-page {
+        @include media-queiry (small) {
+          width: fit-content;
+        }
+      }
+
+      .top-navegation {
+        .ul-nav {
+          li:first-of-type {
+            @include media-queiry (small) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .collection-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      position: relative;
+      margin-top: 20px;
+      gap: 23px 15px;
+
+      .card {
+        // from min-code
+
+        @extend %cards;
+
+        i {
+          position: relative;
+          bottom: 30px;
+          font-size: 0.8rem;
+          padding: 13px;
+          border-radius: 20%;
+          color: white;
+        }
+
+        .black {
+          background-image: linear-gradient(195deg, #42424a, #191919);
+        }
+
+        .move {
+          background-image: linear-gradient(195deg, #ec407a, #d81b60);
+        }
+
+        .green {
+          background-image: linear-gradient(195deg, #66bb6a, #43a047);
+        }
+
+        .blue {
+          background-image: linear-gradient(195deg, #49a3f1, #1a73e8);
+        }
+      }
+
+      .data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        h6 {
+          font-weight: 300;
+          text-align: end;
+
+          span {
+            text-align: end;
+            font-weight: bold;
+            display: block;
+            margin-top: 8px;
+            font-size: 22px;
+          }
+        }
+      }
+
+      .foot {
+        color: #7e7979;
+        border-top: 1px solid rgb(212 212 212 / 40%);
+
+        p {
+          margin-top: 10px;
+          font-weight: 300;
+          font-size: 12px;
+
+          span {
+            color: #45bd29;
+            margin-right: 5px;
+            font-weight: bold;
+          }
+
+          .red {
+            color: red;
+          }
+        }
+      }
+    }
+
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      position: relative;
+      margin-top: 30px;
+      gap: 20px 15px;
+      height: 250px;
+
+      .graphic-table {
+        background: white;
+        border-radius: 8px;
+        position: relative;
+        // padding: 5px;
+
+        .graphic-chart {
+          padding: 10px 20px;
+          box-shadow: 0px 0px 9px -1px #ccc;
+          width: calc(100% - 20px);
+          margin: auto;
+          border-radius: 6px;
+          margin-top: -26px;
+        }
+
+        .chart-box {
+          position: absolute;
+          padding: 10px;
+          bottom: 65px;
+          margin-bottom: -60px;
+
+          .datas {
+            border-bottom: 1px solid #ccc9;
+            padding-bottom: 11px;
+            border-bottom: 1px solid #ccc9;
+            padding-bottom: 11px;
+
+            & p {
+              margin-top: 10px;
+              font-weight: 300;
+              font-size: 12px;
+            }
+          }
+
+          .foots {
+            p {
+              margin-top: 10px;
+              font-weight: 300;
+              font-size: 12px;
+
+              & i {
+                margin-right: 5px;
+                color: #9f9f9f;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .overveiw {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+
+      .projects {
+
+        @extend %cards;
+        overflow-x: auto;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+
+        .title-proj {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          & h6 {
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+          }
+
+          & p {
+            font-weight: 300;
+            color: #7e7979;
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+
+            >i {
+              font-size: 1.1rem;
+              color: #1a73e8;
+              margin-right: 5px;
+            }
+
+            >span {
+              font-weight: 900;
+            }
+          }
+
+          .icons {
+            margin-right: 15px;
+          }
+        }
+
+        .table {
+          overflow-x: auto;
+
+          & table {
+            border-spacing: 0;
+            min-width: 650px;
+            width: 100%;
+            font-size: 11px;
+
+            & thead {
+              background-color: #eee;
+
+              td {
+                padding: 13px 10px;
+                width: 100px;
+              }
+            }
+
+            & tbody {
+              td {
+                padding: 5px 10px;
+                font-weight: 900;
+                letter-spacing: 0.4px;
+                border-bottom: 1px solid #e6e2e2;
+                // border-right: 1px solid #e6e2e2;
+
+                .materials {
+                  display: flex;
+                  align-items: center;
+
+                  &>div img {
+                    height: 30px !important;
+                    width: 30px !important;
+                  }
+
+                  div:last-of-type {
+                    margin-left: 10px;
+                  }
+
+                  img {
+                    height: 20px;
+                    width: 20px;
+
+                    border: {
+                      radius: 50%;
+                      border: 1px soild;
+                    }
+                  }
+                }
+
+                img {
+                  height: 20px;
+                  width: 20px;
+
+                  border: {
+                    radius: 50%;
+                  }
+
+                  border: 2px solid white;
+                }
+
+                .line {
+                  position: relative;
+                  background: #85818117;
+                  top: 8px;
+                  @extend %line;
+
+                  .bg-line {
+                    position: absolute;
+                    background: #49a3f1;
+                    @extend %line;
+
+                    & span {
+                      position: absolute;
+                      left: 0;
+                      top: -1rem;
+                    }
+                  }
+                }
+
+              }
+            }
+          }
+
+          td:nth-of-type(2) {
+            >a {
+              margin-left: -0.78rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .orders {
+    @extend %cards;
+    flex: 1;
+    width: calc(100% - 65%);
+
+    .summerybox {
+      .title-proj {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & h6 {
+          font-size: 0.8rem;
+          margin-bottom: 10px;
+        }
+
+        & p {
+          font-weight: 300;
+          color: #7e7979;
+          display: flex;
+          align-items: center;
+          font-size: 0.8rem;
+
+          >i {
+            font-size: 1.1rem;
+            color: #1a73e8;
+            margin-right: 5px;
+          }
+
+          >span {
+            font-weight: 900;
+          }
+        }
+      }
+
+      & ul {
+        padding: 10px;
+        position: relative;
+        transition: 0.3s;
+
+        li {
+          display: flex;
+          position: relative;
+          margin-bottom: 12px;
+
+          span {
+            i {
+              z-index: 2;
+              position: relative;
+
+              &.black {
+                color: #191919;
+              }
+
+              &.move {
+                color: #d81b60;
+              }
+              &.orange {
+                color: rgb(166, 118, 29);
+              }
+
+              &.green {
+                color: #43a047;
+              }
+
+              &.blue {
+                color: #1a73e8;
+              }
+            }
+          }
+
+          .texts {
+            margin-left: 25px;
+
+            h5 {
+              margin-bottom: 3px;
+              color: #344767;
+              font-size: 0.75rem;
+            }
+
+            span {
+              font-size: 0.8rem;
+              color: #7b809a;
+              font-weight: 400;
+            }
+          }
+
+          &::before {
+            content: "";
+            border-right: 1px solid #e5e5e5;
+            left: 7px;
+            position: absolute;
+            top: 0;
+            height: 100%;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//< !-- end main section -->
+
+
+/*
+  // end main-section dashboad
+*/

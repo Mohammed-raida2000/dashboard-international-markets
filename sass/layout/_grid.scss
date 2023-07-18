@@ -1,0 +1,35 @@
+@use '../helpers/helpers' as *;
+
+/*
+    // Bootstrap’s grid system
+*/
+
+// destructuring method with enterpolotion
+
+// عملتوا عشان  اخلي صفحة الويب متجاوبة مع اي شاشة
+// this container according bootstrap framwork.
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right:0.7rem;
+    padding-left: 0.7rem;
+
+    $breakpoint: 'sm' 540px 576px,
+    'md' 720px 768px,
+    'lg' 970px 992px,
+    'xl' 1140px 1200px,
+    'xxl' 1320px 1400px;
+
+    @each $media ,
+    $max-width,
+    $cont-widths in $breakpoint {
+
+        @media screen and (min-width: $cont-widths) {
+            .MediaScreen-#{$media} {
+                /* #{$media} device*/
+                max-width: $max-width;
+            }
+        }
+    }
+}

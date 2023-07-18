@@ -1,0 +1,24 @@
+// note : =>
+
+// الترتيب مهم لما تستسدعي اي فايل  عشان
+//  ما يجي فايل يعمل اوفر رايت على اي فايل ويسير مشكلة
+// بنستخدم  هي البُنبة انوا تقلل اسطر الاستدعات وتكتفي انك  تستعي ملف واحد  بس
+
+
+
+// import all files from one folders (main file)... (best practies for me)
+
+
+
+@use "./helpers/helpers"; // 1- most important file لازم تستدعيه فكل ملفات ال  layout
+
+// ممنوع تستدعي ملف ال normalize and fontawsome لان  هيخلي الملف سلطة 
+// @use "./vendors/vonder";
+
+@use "./base/bases"; // 3-
+
+@use "./components/components"; // 4-
+
+@use "./layout/layout"; // 5-
+
+@use "./pages/pages"; // 6-

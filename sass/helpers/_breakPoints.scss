@@ -1,0 +1,19 @@
+//media quairy with sass 'mixin';
+@use '../helpers/variables' as *;
+
+@mixin media-queiry ($size) {
+
+    @if ($size ==small) {
+        @media (max-width: $sd) {
+            @content;
+        }
+    }
+
+    @else if ($size==Medium) {
+        @media (min-width: $md ) and (max-width: $xxl ) {
+            @content;
+        }
+    }
+
+    // & so on ...
+}

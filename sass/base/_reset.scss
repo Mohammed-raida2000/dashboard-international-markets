@@ -1,0 +1,53 @@
+// Reset All Elements on this reset file
+@use '../helpers/helpers' as *;
+@use '../helpers/breakPoints' as *;
+
+//
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1f5f9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// scrollbar behavier
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+
+    @include media-queiry (small) {
+        background: #49a3f1;
+    }
+
+    @include media-queiry (Medium) {
+        background: #1a73e8;
+    }
+}

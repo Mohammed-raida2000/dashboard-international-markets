@@ -1,0 +1,15 @@
+@use '../helpers/helpers' as *;
+
+.footer {
+    text-align: center;
+    padding: 31px 10px;
+    color: #344767;
+    box-shadow: 0 0 10px #ccc;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+
+    span {
+        font-weight: bold;
+    }
+}

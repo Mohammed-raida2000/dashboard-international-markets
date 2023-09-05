@@ -25,7 +25,8 @@
 </head>
 
 <body>
-    <main class="dashboad container">
+
+    <main class="Table container">
         <!-- start sidebar-1 -->
         <aside class="sidebar">
             <header>
@@ -93,7 +94,6 @@
                     </li>
                 </ul>
             </header>
-
         </aside>
         <!-- end sidebar-1 -->
 
@@ -108,7 +108,7 @@
                         <span class="space">/</span>
                         <li><a href="dashboad.html"> Dashboard</a></li>
                     </div>
-                    <span class="titles">Dashboard</span>
+                    <span class="titles">Tables</span>
                 </ul>
                 <nav class="top-navegation">
                     <ul class="ul-nav">
@@ -133,35 +133,41 @@
                         <li>
                             <i class="fa-solid fa-user"></i>
                         </li>
+                        <li class="bar">
+                            <a href="#">
+                                <i class="fa-solid fa-bars-staggered"></i>
+                            </a>
+                        
+                            <ul class="minucard">
+                                <a href="dashboad.html"><i class="fa-regular fa-chart-bar fa-fw"></i></a>
+                                <a href="Billing.html"><i class="fa-solid fa-table"></i></a>
+                                <a href="Tables.html"><i class="fa-solid fa-money-bill-wheat"></i></a>
+                                <a href="virtual.html"><i class="fa-solid fa-vr-cardboard"></i></a>
+                                <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+                                <a href="sign in.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
 
             </header>
             <!-- end header -->
-            <!-- start proj overveiw -->
-            <div class="overveiw">
-                <div class="projects">
-                    <div class="title-proj">
-                        <div>
-                            <h6>projects</h6>
-                            <p>
-                                <i class="fa fa-check text-info" aria-hidden="true"></i>
-                                <span>30 done </span>this month
-                            </p>
-                        </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
 
-                    </div>
-                    <div class="table">
-                        <table>
+            <!-- start proj overveiw -->
+            <div class="overveiwTable">
+                <div class="authors">
+                    <h4>
+                        authorTable
+                    </h4>
+                    <div class="tables">
+                        <table class="Datatable">
                             <thead>
                                 <tr>
-                                    <td>Companies</td>
-                                    <td>Members</td>
-                                    <td>Budget</td>
-                                    <td>Completion</td>
+                                    <td>AUTHOR</td>
+                                    <td>FUNCTION</td>
+                                    <td>STATUS</td>
+                                    <td>EMPLOYED</td>
+                                    <td></td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -169,41 +175,168 @@
                                     <td>
                                         <div class="materials">
                                             <div>
-                                                <img src="./image/logo-xd.svg" alt="">
+                                                <img src="./image/team-1.jpg" alt="">
                                             </div>
+                                            <div class="datausers">
+                                                <h5>Mohammed</h5>
+                                                <span>xd.moh@mail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Manger</h5>
+                                        <span>Prodected</span>
+                                    </td>
+                                    <td>
+                                        <div class="active green">
+                                            online
+                                        </div>
+                                    </td>
+                                    <td class="date">
+                                        10/8/2023
+                                    </td>
+                                    <td>
+                                        <strong>Edit</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="materials">
                                             <div>
-                                                Material XD Version
+                                                <img src="./image/team-2.jpg" alt="">
+                                            </div>
+                                            <div class="datausers">
+                                                <h5>Dan</h5>
+                                                <span>Dan.232@mail.com</span>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#">
-                                            <img src="./image/team-1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-2.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-3.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-4.jpg" alt="">
-                                        </a>
+                                        <h5>Programator</h5>
+                                        <span>Developer</span>
                                     </td>
                                     <td>
-                                        <span>$14,000</span>
-                                    </td>
-                                    <td>
-                                        <div class="line" style="width: 100%;">
-                                            <span class="bg-line" style="width: 70%;">
-                                                <span>
-                                                    60$
-                                                </span>
-                                            </span>
+                                        <div class="active black">
+                                            offline
                                         </div>
+                                    </td>
+                                    <td class="date">
+                                        11/8/2023
+                                    </td>
+                                    <td>
+                                        <strong>Edit</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="materials">
+                                            <div>
+                                                <img src="./image/team-3.jpg" alt="">
+                                            </div>
+                                            <div class="datausers">
+                                                <h5>yuta</h5>
+                                                <span>yuta212@mail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Projects</h5>
+                                        <span>Executive</span>
+                                    </td>
+                                    <td>
+                                        <div class="active green">
+                                            online
+                                        </div>
+                                    </td>
+                                    <td class="date">
+                                        8/5/2023
+                                    </td>
+                                    <td>
+                                        <strong>Edit</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="materials">
+                                            <div>
+                                                <img src="./image/team-4.jpg" alt="">
+                                            </div>
+                                            <div class="datausers">
+                                                <h5>mai</h5>
+                                                <span>mai@mail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Manger</h5>
+                                        <span>Prodected</span>
+                                    </td>
+                                    <td>
+                                        <div class="active green">
+                                            online
+                                        </div>
+                                    </td>
+                                    <td class="date">
+                                        10/8/2023
+                                    </td>
+                                    <td>
+                                        <strong>Edit</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="materials">
+                                            <div>
+                                                <img src="./image/team-2.jpg" alt="">
+                                            </div>
+                                            <div class="datausers">
+                                                <h5>shada</h5>
+                                                <span>shada@mail.com</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>Manger</h5>
+                                        <span>Prodected</span>
+                                    </td>
+                                    <td>
+                                        <div class="active black">
+                                            offline
+                                        </div>
+                                    </td>
+                                    <td class="date">
+                                        10/8/2023
+                                    </td>
+                                    <td>
+                                        <strong>Edit</strong>
                                     </td>
                                 </tr>
                             </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="overveiwTable">
+                <div class="Projects">
+                    <h4>
+                        Projects Table
+                    </h4>
+                    <div class="tables">
+                        <table class="Datatable">
+                            <thead>
+                                <tr>
+                                    <td>PROJECT</td>
+                                    <td>BUDGET</td>
+                                    <td>STATUS</td>
+                                    <td>COMPLETION</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
                             <tbody>
                                 <tr>
                                     <td>
@@ -211,177 +344,203 @@
                                             <div>
                                                 <img src="./image/logo-atlassian.svg" alt="">
                                             </div>
-                                            <div>
-                                                Add Progress Track
+                                            <div class="datausers">
+                                                <h5>Atlassian</h5>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#">
-                                            <img src="./image/team-3.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-4.jpg" alt="">
-                                        </a>
+                                        <h3>$2,500</h3>
                                     </td>
                                     <td>
-                                        <span>$70,000</span>
-                                    </td>
-                                    <td>
-                                        <div class="line" style="width: 100%;">
-                                            <span class="bg-line" style="width: 30%;">
-                                                <span>
-                                                    30$
-                                                </span>
-                                            </span>
+                                        <div class="status">
+                                            working
                                         </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="materials">
-                                            <div>
-                                                <img src="./image/logo-slack.svg" alt="">
-                                            </div>
-                                            <div>
-                                                Fix Platform Errors
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#">
-                                            <img src="./image/team-1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-2.jpg" alt="">
-                                        </a>
-
-                                    </td>
-                                    <td>
-                                        <span>$180,000</span>
                                     </td>
                                     <td>
                                         <div class="line" style="width: 100%;">
                                             <span class="bg-line"
-                                                style="width: 100%; background-color: rgb(29, 176, 29);">
+                                                style="width: 60%;background-color: rgb(29, 176, 29);">
                                                 <span>
-                                                    100$
+                                                    60%
                                                 </span>
                                             </span>
                                         </div>
                                     </td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </td>
                                 </tr>
-                            </tbody>
-                            <tbody>
                                 <tr>
                                     <td>
                                         <div class="materials">
                                             <div>
-                                                <img src="./image/logo-spotify.svg" alt="">
+                                                <img src="./image/github.svg" alt="">
                                             </div>
-                                            <div>
-                                                Launch our Mobile App
+                                            <div class="datausers">
+                                                <h5>Github</h5>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#">
-                                            <img src="./image/team-1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-2.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-3.jpg" alt="">
-                                        </a>
-
+                                        <h3>$2,500</h3>
                                     </td>
                                     <td>
-                                        <span>$12,000</span>
+                                        <div class="status">
+                                            working
+                                        </div>
                                     </td>
                                     <td>
                                         <div class="line" style="width: 100%;">
                                             <span class="bg-line"
-                                                style="width: 100%;background-color: rgb(29, 176, 29);">
+                                                style="width: 40%;    background-image: linear-gradient(195deg, #ec407a, #d81b60);">
                                                 <span>
-                                                    100%
+                                                    40%
                                                 </span>
                                             </span>
                                         </div>
                                     </td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </td>
                                 </tr>
-                            </tbody>
-                            <tbody>
                                 <tr>
                                     <td>
                                         <div class="materials">
                                             <div>
-                                                <img src="./image/logo-jira.svg" alt="">
+                                                <img src="./image/devto.svg" alt="">
                                             </div>
-                                            <div>
-                                                Add the New Pricing Page
+                                            <div class="datausers">
+                                                <h5>Devto</h5>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#">
-                                            <img src="./image/team-4.jpg" alt="">
-                                        </a>
+                                        <h3>$4,500</h3>
                                     </td>
                                     <td>
-                                        <span>$14,000</span>
+                                        <div class="status">
+                                            busy
+                                        </div>
                                     </td>
                                     <td>
                                         <div class="line" style="width: 100%;">
-                                            <span class="bg-line" style="width: 70%;">
+                                            <span class="bg-line"
+                                                style="width: 80%;background-image: linear-gradient(195deg, #42424a, #191919);;">
                                                 <span>
-                                                    60$
+                                                    80%
                                                 </span>
                                             </span>
                                         </div>
                                     </td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </td>
                                 </tr>
-                            </tbody>
-                            <tbody>
                                 <tr>
                                     <td>
                                         <div class="materials">
                                             <div>
-                                                <img src="./image/logo-invision.svg" alt="">
+                                                <img src="./image/logo-slack (1).svg" alt="">
                                             </div>
-                                            <div>
-                                                Redesign New Online Shop
+                                            <div class="datausers">
+                                                <h5>Slack</h5>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#">
-                                            <img src="./image/team-1.jpg" alt="">
-                                        </a>
-                                        </a>
-                                        <a href="#">
-                                            <img src="./image/team-4.jpg" alt="">
-                                        </a>
+                                        <h3>$1,000</h3>
                                     </td>
                                     <td>
-                                        <span>$3,000</span>
+                                        <div class="status">
+                                            working
+                                        </div>
                                     </td>
                                     <td>
                                         <div class="line" style="width: 100%;">
-                                            <span class="bg-line" style="width: 20%;">
+                                            <span class="bg-line"
+                                                style="width: 30%;background-color: rgb(29, 176, 29);">
+                                                <span>
+                                                    30%
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="materials">
+                                            <div>
+                                                <img src="./image/bootstrap.svg" alt="">
+                                            </div>
+                                            <div class="datausers">
+                                                <h5>Bootstrap</h5>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h3>$1,500</h3>
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            working
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="line" style="width: 100%;">
+                                            <span class="bg-line"
+                                                style="width: 20%;    background-image: linear-gradient(195deg, #ec407a, #d81b60);;">
                                                 <span>
                                                     20%
                                                 </span>
                                             </span>
                                         </div>
                                     </td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="materials">
+                                            <div>
+                                                <img src="./image/logo-asana.svg" alt="">
+                                            </div>
+                                            <div class="datausers">
+                                                <h5>Asana</h5>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h3>$8,500</h3>
+                                    </td>
+                                    <td>
+                                        <div class="status">
+                                            busy
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="line" style="width: 100%;">
+                                            <span class="bg-line"
+                                                style="width: 60%;background-color: rgb(29, 176, 29);">
+                                                <span>
+                                                    60%
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
-
                     </div>
+
+
                 </div>
             </div>
             <!-- end  proj overveiw  -->
@@ -391,11 +550,10 @@
     <!-- start  footer  -->
     <div class="footer container">
         <section>
-            &#169; 2023, made with by <span>Eng-Mohammed abu raida&#9829;</span> for a better web.
+            &#169; 2023, Developed via <span>Eng-Mohammed abu raida&#9829;</span> for a better web.
         </section>
     </div>
     <!-- end footer -->
-
 </body>
 
 </html>

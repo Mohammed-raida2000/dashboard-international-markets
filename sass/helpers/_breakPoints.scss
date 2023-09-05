@@ -1,6 +1,25 @@
 //media quairy with sass 'mixin';
 @use '../helpers/variables' as *;
 
+/**
+--- $grid-breakpoints minimum widths
+--- less than 767px Small devices
+
+    // Small devices
+    $sd : 767px;
+
+    // Medium devices
+    $md : 768px;
+
+    // Large devices
+    $lg: 992px;
+
+    // X-Large devices
+    $xl: 1200px;
+
+    // XX-Large devices
+    $xxl: 1400px;
+**/
 @mixin media-queiry ($size) {
 
     @if ($size ==small) {
@@ -9,11 +28,11 @@
         }
     }
 
-    @else if ($size==Medium) {
+    @else if ($size ==Medium) {
         @media (min-width: $md ) and (max-width: $xxl ) {
             @content;
         }
     }
 
-    // & so on ...
+    // & LOOP  ...
 }

@@ -1,4 +1,11 @@
+// ممنوع  تستدعي الصفحة  نفسها جوات  نفس الملف  
+
+// Module loop: this module is already being loaded.
+
+// EX : @forward "./pages";
+
 @forward "./dashboard";
 
 @forward "./tables";
-@forward "./billing.scss";
+
+@forward "./billing";

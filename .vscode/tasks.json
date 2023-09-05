@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "g:\\project frontend\\dashboard international markets",
+			"problemMatcher": [
+				"$node-sass"
+			],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}

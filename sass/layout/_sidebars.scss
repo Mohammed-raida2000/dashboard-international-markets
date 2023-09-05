@@ -14,11 +14,12 @@
 
   @include media-queiry (small) {
     width: 57px;
+    display: none;
   }
 
   @include media-queiry (Medium) {
     width: 180px;
-    font-size: $font-12px;
+    font-size: $font-11px;
   }
 
   .headboard a {
@@ -69,6 +70,7 @@
       margin-top: 1.5px;
       margin-bottom: 1.5px;
 
+
       @include media-queiry (small) {
         text-align: center;
         padding: 10px;
@@ -93,6 +95,9 @@
     }
 
     & .textaccount {
+      box-shadow: -1px -1px 2px -1px #ccc;
+      text-align: center;
+
       @include media-queiry (small) {
         padding: 0px;
       }

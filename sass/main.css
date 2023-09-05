@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* 
+   // @forward All Files in helpers Folder
+
+*/
 /**
 --- $grid-breakpoints minimum widths
 --- less than 767px Small devices
@@ -18,10 +22,6 @@
     // XX-Large devices
     $xxl: 1400px;
 **/
-/* 
-   // @forward All Files in helpers Folder
-
-*/
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -76,6 +76,7 @@ html {
   border-radius: 4px;
 }
 .main-header .title-page {
+  width: -moz-fit-content;
   width: fit-content;
 }
 .main-header .title-page .main-title {
@@ -128,7 +129,7 @@ html {
 }
 @media (max-width: 767px) {
   .main-header .top-navegation .ul-nav li:not(:last-of-type),
-.main-header .top-navegation .ul-nav li:not(:first-of-type) {
+  .main-header .top-navegation .ul-nav li:not(:first-of-type) {
     padding-right: 7px;
   }
 }
@@ -160,14 +161,14 @@ html {
   border-radius: 0 4px 4px 0;
 }
 .main-header .top-navegation .star-user a:first-of-type {
-  border: 1px solid #1f232826;
+  border: 1px solid rgba(31, 35, 40, 0.1490196078);
   text-transform: capitalize;
   background-color: linear-gradient(180deg, #f6f8fa, #ebf0f4 90%);
   border-radius: 4px 0 0 4px;
 }
 .main-header .top-navegation .star-user a:last-of-type {
-  border: 1px solid #1f232826;
-  background-color: #5d97984d;
+  border: 1px solid rgba(31, 35, 40, 0.1490196078);
+  background-color: rgba(93, 151, 152, 0.3019607843);
 }
 
 /*
@@ -282,7 +283,7 @@ html {
 }
 @media (max-width: 767px) {
   .sidebar .dash .active {
-    background-image: linear-gradient(92deg, #49a3f1, #49a3f19c);
+    background-image: linear-gradient(92deg, #49a3f1, rgba(73, 163, 241, 0.6117647059));
   }
 }
 .sidebar .dash li {
@@ -297,7 +298,7 @@ html {
   }
 }
 .sidebar .dash li:hover {
-  background-color: #cccccc7d !important;
+  background-color: rgba(204, 204, 204, 0.4901960784) !important;
   border-radius: 4px 0;
 }
 .sidebar .dash li a, .sidebar .dash li .textaccount p, .sidebar .dash .textaccount li p {
@@ -371,6 +372,7 @@ html {
 }
 @media (max-width: 767px) {
   .dashboad .main-section .main-header .title-page, .Table .main-section .main-header .title-page {
+    width: -moz-fit-content;
     width: fit-content;
   }
 }
@@ -411,7 +413,7 @@ html {
   width: 130px;
   height: 70px;
   border-radius: 3px;
-  box-shadow: 0px 0px 2px -1px #0000005e;
+  box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.368627451);
 }
 @media (min-width: 768px) and (max-width: 1400px) {
   .dashboad .main-section .main-header .top-navegation .ul-nav .bar .minucard i, .Table .main-section .main-header .top-navegation .ul-nav .bar .minucard i {
@@ -519,9 +521,9 @@ html {
   margin-bottom: -60px;
 }
 .dashboad .main-section .charts .graphic-table .chart-box .datas, .Table .main-section .charts .graphic-table .chart-box .datas {
-  border-bottom: 1px solid #ccc9;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.6);
   padding-bottom: 11px;
-  border-bottom: 1px solid #ccc9;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.6);
   padding-bottom: 11px;
 }
 .dashboad .main-section .charts .graphic-table .chart-box .datas p, .Table .main-section .charts .graphic-table .chart-box .datas p {
@@ -635,7 +637,7 @@ html {
 }
 .dashboad .main-section .overveiw .projects .table table tbody td .line, .Table .main-section .overveiw .projects .table table tbody td .line {
   position: relative;
-  background: #85818117;
+  background: rgba(133, 129, 129, 0.0901960784);
   top: 8px;
 }
 .dashboad .main-section .overveiw .projects .table table tbody td .line .bg-line, .Table .main-section .overveiw .projects .table table tbody td .line .bg-line {
@@ -652,7 +654,7 @@ html {
 }
 .dashboad .main-section .overveiw .orders, .Table .main-section .overveiw .orders {
   flex: 1;
-  width: calc(100% - 65%);
+  width: 35%;
 }
 @media (max-width: 767px) {
   .dashboad .main-section .overveiw .orders, .Table .main-section .overveiw .orders {
@@ -706,7 +708,7 @@ html {
   color: #d81b60;
 }
 .dashboad .main-section .overveiw .orders .summerybox ul li span i.orange, .Table .main-section .overveiw .orders .summerybox ul li span i.orange {
-  color: #a6761d;
+  color: rgb(166, 118, 29);
 }
 .dashboad .main-section .overveiw .orders .summerybox ul li span i.green, .Table .main-section .overveiw .orders .summerybox ul li span i.green {
   color: #43a047;
@@ -749,7 +751,7 @@ html {
 }
 .Table .overveiwTable .authors h4 {
   font-size: 12px;
-  background-image: linear-gradient(92deg, #49a3f1, #49a3f19c) !important;
+  background-image: linear-gradient(92deg, #49a3f1, rgba(73, 163, 241, 0.6117647059)) !important;
   color: white;
   position: relative;
   top: -30px;
@@ -787,6 +789,7 @@ html {
 }
 .Table .overveiwTable .authors .Datatable tbody .active {
   padding: 5px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   color: white;
@@ -810,7 +813,7 @@ html {
 }
 .Table .overveiwTable .Projects h4 {
   font-size: 12px;
-  background-image: linear-gradient(92deg, #49a3f1, #49a3f19c) !important;
+  background-image: linear-gradient(92deg, #49a3f1, rgba(73, 163, 241, 0.6117647059)) !important;
   color: white;
   position: relative;
   top: -30px;
@@ -850,7 +853,7 @@ html {
   display: flex;
   align-items: center;
   position: relative;
-  background: #85818117;
+  background: rgba(133, 129, 129, 0.0901960784);
 }
 .Table .overveiwTable .Projects .Datatable tbody td .line span:first-of-type {
   position: relative;
@@ -865,4 +868,4 @@ html {
   text-align: center;
 }
 
-/*# sourceMappingURL=billing.css.map */
+/*# sourceMappingURL=main.css.map */

@@ -17,7 +17,7 @@
             text-transform: capitalize;
             position: relative;
 
-            li:first-of-type>a {
+            li:first-of-type > a {
                 color: #ccc;
                 font-weight: normal;
             }
@@ -67,9 +67,15 @@
             li:not(:last-of-type),
             li:not(:first-of-type) {
                 padding-right: 15px;
+                transition: 0.3s;
+
+                @include media-queiry (small) {
+                    padding-right: 7px;
+                    
+                }
             }
 
-            & li:nth-of-type(4)>i::after {
+            & li:nth-of-type(4) > i::after {
                 content: "3";
                 background: red;
                 height: 12px;

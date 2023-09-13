@@ -104,6 +104,10 @@
                 color: initial;
                 padding: 2px;
                 border-radius: 0 4px 4px 0;
+
+                i {
+                    color: orange;
+                }
             }
 
             & a:first-of-type {

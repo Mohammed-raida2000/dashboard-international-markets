@@ -160,6 +160,9 @@ html {
   padding: 2px;
   border-radius: 0 4px 4px 0;
 }
+.main-header .top-navegation .star-user a i {
+  color: orange;
+}
 .main-header .top-navegation .star-user a:first-of-type {
   border: 1px solid #1f232826;
   text-transform: capitalize;
@@ -369,6 +372,7 @@ html {
 }
 .dashboad .main-section, .Table .main-section {
   width: 100%;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .dashboad .main-section .main-header .title-page, .Table .main-section .main-header .title-page {
@@ -858,8 +862,7 @@ html {
   font-size: 9px;
 }
 .Table .overveiwTable .Projects .Datatable tbody td .line .bg-line span {
-  left: -25px;
-  top: -4px;
+  top: -13px;
 }
 .Table .overveiwTable .Projects .Datatable tbody td:last-of-type {
   cursor: progress;
